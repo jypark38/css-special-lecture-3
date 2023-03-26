@@ -1,0 +1,228 @@
+/* reset */
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+	/*
+	font-weight: 500;
+	
+	*/
+}
+
+body, h1, h2, h3, p, ul, li{
+	margin: 0;
+	font-weight: initial;
+}
+
+ul,li{
+	list-style: none;
+	padding: 0;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+
+p{
+	font-size: 14px;
+}
+
+li{
+	font-size: 14px;
+}
+
+button{
+    border: 0;
+    background: none;
+    font-size:14px;
+    margin:0;
+    padding:0;
+}
+
+img{
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+/* layout */
+
+.main {
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.wrapper{
+	width: 1080px;
+	margin: 0 auto
+}
+
+.wrapper > header, .wrapper > section {
+	display: flex;
+}
+
+.header > .header-title{
+	align-self: center;
+}
+
+.section:nth-of-type(2n){
+	flex-direction: row-reverse;
+}
+
+.section:last-child{
+	margin-bottom: 0px;
+}
+
+.section .section-title{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position : relative;
+}
+
+.section-wrap{
+    display: flex;
+}
+
+.pink .header {
+    justify-content: space-between;
+}
+
+/* purple */
+
+.purple {
+	background-color: #673399;
+}
+
+.pink {
+    background-color: seashell;
+}
+
+/* header */
+.header{
+	margin-bottom: 100px;
+}
+
+.purple .section-title,.purple .header-title {
+	color: white;
+	width: 26%;
+	flex-shrink: 0;
+}
+
+.header-title > .title-wrap {
+	display: block;
+	width: fit-content;
+}
+
+/* box shadow로 구현이 되네,,? */
+.title-underline{
+	display: block;
+	width: 100%;
+	height: 20px;
+	background-color: orangered;
+	margin-top: -20px;
+}
+
+.header > .line{
+	width: 100px;
+	border-top : 1px solid #bd8fe8;
+	align-self: center;
+	flex-shrink: 0;
+}
+
+.header-text{
+	height: fit-content;
+	padding: 24px;
+	align-self: center;
+	line-height: calc(14px * 1.6);
+    color: #bd8fe8;
+}
+
+/* section */
+.section {
+	margin-bottom: 24px;
+}
+
+.section .section-title{
+    color: white;
+    z-index: 1;
+	flex-shrink: 0;
+}
+
+.Rest::before {
+	background-image: url(./images/photo01.png);
+    object-fit: cover;
+}
+
+.Craft::before {
+	background-image: url(./images/photo02.png);
+}
+
+.Scrap::before{
+	background-image: url(./images/photo03.png);
+}
+
+.section .section-title::before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	position: absolute;
+	top:0;
+	left: 0;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.section-content{
+	background-color: white;
+
+	padding: 24px;
+	flex-grow: 1;
+}
+
+
+.section-content .content-disc{
+	padding-left: 24px;
+}
+
+.content-title{
+    color : #673399;
+}
+
+.content-disc li{
+	text-indent : -20px;
+    margin-bottom: 10px;
+}
+
+.content-disc li:last-child{
+	margin-bottom: 0;
+}
+
+.content-disc li::before {
+	display: inline-block;
+	content: "";
+	width: 10px;
+	height: 10px;
+
+	background: #bd8fe8;
+	
+	margin-right: 10px;
+
+	border-radius: 5px;
+}
