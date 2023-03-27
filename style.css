@@ -3,12 +3,9 @@
 :root {
     font-family: 'Montserrat', sans-serif;
 	/*
-	font-weight: 500;
-	
+	font-weight: 500;	
 	*/
 }
-
-
 
 body, h1, h2, h3, p, ul, li, hr{
 	margin: 0;
@@ -105,8 +102,7 @@ img{
 
 .card-wrap{
     display: flex;
-    gap: 24px;
-    
+    gap: 24px;    
 }
 
 .pink .card-wrap .card{
@@ -185,7 +181,6 @@ img{
 
 .Rest::before {
 	background-image: url(./images/photo01.png);
-    object-fit: cover;
 }
 
 .Craft::before {
@@ -212,7 +207,6 @@ img{
 
 .purple .section .section-content{
 	background-color: white;
-
 	padding: 24px;
 	flex-grow: 1;
 }
@@ -253,6 +247,7 @@ img{
 .pink .header .header-title{
     font-size: 40px;
     color: salmon;
+    flex-basis: calc((100% - 48px)/3);
 }
 
 .pink .title-underline {
@@ -272,6 +267,8 @@ img{
 
     border-radius: 5px;
     box-shadow: 0 3px 0 0 #AB3A1A;
+
+    cursor: pointer;
 }
 
 .pink .card {
@@ -296,6 +293,8 @@ img{
 
 .pink .card .tag-wrap{
     margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .pink .card .tag-wrap .card-tag {
@@ -304,8 +303,12 @@ img{
     font-size: 12px;
     padding: 5px;
 
+    width: fit-content;
+
     font-family: 'Montserrat';
     font-weight: 700;
+
+    margin: 2px;
 }
 
 .pink .card .content-title{
@@ -316,22 +319,21 @@ img{
 }
 
 .pink .card-content .content-title{
-    min-height: 60px;
+    min-height:60px;
+
     word-wrap: break-word;
+    
     overflow: hidden;
+    
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
 
-.test{
-    border: 2px solid #eee;
-}
-
 .pink .card-content .content-text{
     font-size: 14px;
     color: #999;
-    flex-grow: 1;
+    flex: 2;
     margin-bottom: 24px;
 }
 
@@ -348,6 +350,20 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.pink .content-foot .foot-btn{
+    cursor: pointer;
+}
+
+.pink .soldout .foot-btn
+,.pink .soldout .foot-img{
+    display: none;
+}
+
+.pink .card-wrap > :not([class$='soldout']) .soldout-text{
+    display: none;
 }
 
 .pink .foot-text, .pink .foot-btn{
@@ -355,14 +371,14 @@ img{
     color: inherit;
 }
 
-.img-wrap{
+.pink .img-wrap{
     margin-right: 24px;
     position: relative;
     width: 90px;
-    height: 30px
+    height: 40px
 }
 
-.foot-img{
+.pink .foot-img{
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -370,14 +386,14 @@ img{
     border: 5px solid white;
 }
 
-.img-wrap .foot-img:first-child{
+.pink .img-wrap .foot-img:first-child{
     right: 50px;
 }
 
-.img-wrap .foot-img:nth-child(2){
+.pink .img-wrap .foot-img:nth-child(2){
     right: 25px;
 }
 
-.img-wrap .foot-img:last-child{
+.pink .img-wrap .foot-img:last-child{
     right: 0px;
 }
