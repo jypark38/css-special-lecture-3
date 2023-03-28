@@ -295,6 +295,7 @@ img{
     margin-bottom: 24px;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
 .pink .card .tag-wrap .card-tag {
@@ -308,7 +309,6 @@ img{
     font-family: 'Montserrat';
     font-weight: 700;
 
-    margin: 2px;
 }
 
 .pink .card .content-title{
